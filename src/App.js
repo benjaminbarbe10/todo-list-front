@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = { adverts: [] }
+
+  componentDidMount() {
+    fetch('/adverts')
+      .then(res => res.json())
+      .then(adverts => this.setState({ adverts }));
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>Adverts</h1>
+        {this.state.adverts.map(advert =>
+          <div key={advert.id}>{advert.name}</div>
+        )}
       </div>
     );
   }
