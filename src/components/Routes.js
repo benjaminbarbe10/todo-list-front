@@ -1,8 +1,8 @@
 import React from 'react';
 
 import {Switch, Route} from 'react-router-dom';
-import Adverts from './adverts';
-import Home from './home';
+import Adverts from './Adverts';
+import Home from './Home';
 
 //
 // ─── ROUTES USING REACT ROUTER DOM ──────────────────────────────────────────────
@@ -11,7 +11,8 @@ import Home from './home';
 const Routes = () => (
     <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/adverts" component={Adverts} />
+        <Route path="/Adverts" component={Adverts} />
+        
     </Switch> 
 )
 export default Routes;

@@ -1,6 +1,21 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
+import Header from './Header';
+import Footer  from './Footer'
+
 export default class Adverts extends Component {
-  state = { adverts: [] };
+  render() {
+    return (
+      <div>
+        <Header />
+        <Footer />
+      </div>
+    )
+  }
+}
+
+
+
+/*  state = { adverts: [] };
 
   componentDidMount() {   
     fetch("/adverts")
@@ -17,5 +32,4 @@ export default class Adverts extends Component {
         ))}
       </div>
     );
-  }
-}
+  }*/
