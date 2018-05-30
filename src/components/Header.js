@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 
-export default class Header extends Component {
-  render() {
-    return (
-      <div>
+//
+// ─── STATELESS FUNCTIONAL COMPONENT IF THERE ONLY RENDER ────────────────────────
+//
+    
+
+const Header = (props) => (
+    <div>
         <h3>Header</h3>
-      </div>
-    )
-  }
-}
+    </div>
+)
+
+export default Header;
