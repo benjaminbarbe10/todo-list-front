@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
 import './App.css';
+import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
+import Routes from './components/routes';
+import { Link } from 'react-router-dom';
 
 class App extends Component {
-  state = { adverts: [] }
+render(){
+  return (
+    <div className="demo-big-content">
+      <Layout>
+        <Header title="TODOLIST" scroll>
+          <Navigation>
+            <Link to="/">Home</Link>
+            <Link to="/adverts">Adverts</Link>
+          </Navigation>
+        </Header>
+        <Drawer title="TODOLIST">
+          <Navigation>
+            <Link to="/">Home</Link>
+            <Link to="/adverts">Adverts</Link>
+          </Navigation>
+        </Drawer>
+        <Content>
+          <div className="page-content" />
+          <Routes/>
+        </Content>
+      </Layout>
+    </div>
 
-  componentDidMount() {
-    fetch('/adverts')
-      .then(res => res.json())
-      .then(adverts => this.setState({ adverts }));
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <h1>Adverts</h1>
-        {this.state.adverts.map(advert =>
-          <div key={advert.id}>{advert.name}</div>
-        )}
-      </div>
-    );
-  }
+  )
+}
 }
 
 export default App;
