@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Header from './Header';
-import Footer  from './Footer'
+import React, { Component } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default class Adverts extends Component {
   render() {
@@ -9,11 +9,9 @@ export default class Adverts extends Component {
         <Header />
         <Footer />
       </div>
-    )
+    );
   }
 }
-
-
 
 /*  state = { adverts: [] };
 
