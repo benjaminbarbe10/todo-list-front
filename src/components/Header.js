@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 //
 // ─── STATELESS FUNCTIONAL COMPONENT IF THERE ONLY RENDER ────────────────────────
