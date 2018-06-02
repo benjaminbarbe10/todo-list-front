@@ -1,33 +1,38 @@
 import React, { Component } from "react";
+import { getAdverts } from '../actions/actions';
+import { connect } from 'react-redux';
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default class Adverts extends Component {
-  render() {
-    return (
-      <div>
+
+class Adverts extends Component {
+  componentDidMount() {
+    this.props.getAdverts();
+  }
+ //advert key problem use index instead
+  render() { 
+    const {adverts} = this.props;
+    return <div> 
         <Header />
+        <h1>Adverts</h1>
+        {adverts.map(advert => (
+          <li key={advert._id}>
+            {advert.name}
+          </li>
+        ))}
         <Footer />
-      </div>
-    );
+      </div>;
   }
 }
 
-/*  state = { adverts: [] };
+const mapStateToProps = state => ({
+  adverts: state.adverts
+});
 
-  componentDidMount() {   
-    fetch("/adverts")
-      .then(res => res.json())
-      .then(adverts => this.setState({ adverts }));
-  }
+export default connect(mapStateToProps, { getAdverts })(Adverts);
 
-  render() {
-    return (
-      <div className="App">
-        <h1>Adverts</h1>
-        {this.state.adverts.map(advert => (
-          <div key={advert.id}>{advert.name}</div>
-        ))}
-      </div>
-    );
-  }*/
+
+/*
+- PROMESSE JAVASCRIPT
+- destructuring 
+*/ 
