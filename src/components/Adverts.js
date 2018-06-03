@@ -8,15 +8,19 @@ class Adverts extends Component {
   componentDidMount() {
     this.props.getAdverts();
   }
+
   render() {
     const { adverts } = this.props;
+
     return (
       <div>
         <Header />
         <h1>Adverts</h1>
         {adverts.map(advert => (
           <li key={advert._id}>
-            {advert.name} {advert.surname}
+            <a href={"adverts/" + advert._id}>
+              {advert.name} {advert.surname}
+            </a>
           </li>
         ))}
         <Footer />
