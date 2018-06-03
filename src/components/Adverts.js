@@ -10,7 +10,7 @@ class Adverts extends Component {
   }
 
   render() {
-    const { adverts } = this.props;
+    const { adverts = [] } = this.props;
 
     return (
       <div>
