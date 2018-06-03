@@ -22,7 +22,7 @@ class Advert extends Component {
 }
 
 const mapStateToProps = state => ({
-  adverts: state.adverts
+  advert: state.advert
 });
 
 export default connect(mapStateToProps, { getAdvert })(Advert);
