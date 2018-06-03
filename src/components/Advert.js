@@ -6,7 +6,8 @@ import Footer from "./Footer";
 
 class Advert extends Component {
   componentDidMount() {
-    this.props.getAdvert();
+    const id = this.props.match.params.id;
+    this.props.getAdvert(id);
   }
   render() {
     const { advert } = this.props;
