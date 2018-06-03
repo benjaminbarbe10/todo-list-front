@@ -8,7 +8,6 @@ class Adverts extends Component {
   componentDidMount() {
     this.props.getAdverts();
   }
-  //advert key problem use index instead
   render() {
     const { adverts } = this.props;
     return (

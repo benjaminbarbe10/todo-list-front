@@ -2,6 +2,7 @@ import React from "react";
 
 import { Switch, Route } from "react-router-dom";
 import Adverts from "./Adverts";
+import Advert from "./Advert";
 import Home from "./Home";
 import NotFound from "./NotFound";
 
@@ -12,8 +13,8 @@ import NotFound from "./NotFound";
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route path="/Adverts" component={Adverts} />
-    <Route path="/adverts/:id" component={Adverts} />
+    <Route path="/adverts" component={Adverts} />
+    <Route path="/adverts/:id" component={Advert} />
     <Route component={NotFound} />
   </Switch>
 );
