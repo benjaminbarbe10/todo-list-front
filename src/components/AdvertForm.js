@@ -1,7 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 
-let AddAdvertForm = props => {
+let AdvertForm = props => {
   const { handleSubmit } = props;
   return (
     <form onSubmit={handleSubmit}>
@@ -18,8 +18,8 @@ let AddAdvertForm = props => {
   );
 };
 
-AddAdvertForm = reduxForm({
+AdvertForm = reduxForm({
   form: "advert"
-})(AddAdvertForm);
+})(AdvertForm);
 
-export default AddAdvertForm;
+export default AdvertForm;

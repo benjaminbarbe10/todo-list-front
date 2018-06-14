@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
-import AddAdvertForm from "./AddAdvertForm";
+import AdvertForm from "./AdvertForm";
 
 class Adverts extends Component {
   constructor() {
@@ -50,7 +50,7 @@ class Adverts extends Component {
             <AddIcon />
           </Button>
         </div>
-        {this.state.showForm && <AddAdvertForm onSubmit={this.submit} />}
+        {this.state.showForm && <AdvertForm onSubmit={this.submit} />}
 
         <Footer />
       </div>

@@ -1,5 +1,7 @@
 import { combineReducers } from "redux";
 import { GET_ADVERTS, GET_ADVERT } from "../actions/actions";
+import { reducer as formReducer } from "redux-form";
+
 const INITIAL_STATE = {
   adverts: [],
   advert: {}
@@ -17,7 +19,8 @@ function todos(state = INITIAL_STATE, action) {
 }
 
 const todoApp = combineReducers({
-  todos
+  todos,
+  form: formReducer
 });
 
 export default todoApp;

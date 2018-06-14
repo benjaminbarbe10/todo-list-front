@@ -23,7 +23,7 @@ export function getAdverts() {
 
 export function getAdvert(id) {
   return dispatch => {
-    fetch(`adverts/${id}`)
+    fetch(`${id}`)
       .then(res => res.json())
       .then(payload => {
         dispatch({ type: GET_ADVERT, payload });
