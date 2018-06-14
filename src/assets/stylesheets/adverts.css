@@ -1,3 +1,7 @@
-h1{
-    color: blue;
+h1 {
+  color: blue;
+}
+
+.add-advert-btn {
+  margin-left: 50%;
 }
