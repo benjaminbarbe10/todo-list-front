@@ -1,22 +1,28 @@
-import React from "react";
 import { Field, reduxForm } from "redux-form";
+import React, { Component } from "react";
 
-let AdvertForm = props => {
-  const { handleSubmit } = props;
-  return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name"> Name</label>
-        <Field name="name" component="input" type="text" />
-      </div>
-      <div>
-        <label htmlFor="surname">SurName</label>
-        <Field name="surname" component="input" type="text" />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-  );
-};
+class AdvertForm extends Component {
+  submit() {
+    //this
+  }
+
+  render() {
+    const { handleSubmit } = this.props;
+    return (
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name"> Name</label>
+          <Field name="name" component="input" type="text" />
+        </div>
+        <div>
+          <label htmlFor="surname">SurName</label>
+          <Field name="surname" component="input" type="text" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    );
+  }
+}
 
 AdvertForm = reduxForm({
   form: "advert"

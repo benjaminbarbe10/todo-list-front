@@ -11,6 +11,18 @@ export const GET_ADVERT = "GET_ADVERT";
 // ─── ACTION CREATORS ────────────────────────────────────────────────────────────
 //
 
+export function addAdvert(data) {
+  return dispatch => {
+    return fetch("adverts", {
+      method: "post",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+  };
+}
+
 export function getAdverts() {
   return dispatch => {
     fetch("adverts")

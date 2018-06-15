@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { getAdverts } from "../actions/actions";
+import { getAdverts, addAdvert } from "../actions/actions";
+
 import { connect } from "react-redux";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -16,6 +17,7 @@ class Adverts extends Component {
   }
   submit = values => {
     console.log(values);
+    addAdvert(values);
   };
   onClick(e) {
     e.preventDefault();
