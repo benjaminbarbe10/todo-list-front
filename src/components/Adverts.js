@@ -17,7 +17,8 @@ class Adverts extends Component {
   }
   submit = values => {
     console.log(values);
-    addAdvert(values);
+    this.props.addAdvert(values);
+    this.props.getAdverts();
   };
   onClick(e) {
     e.preventDefault();
@@ -66,7 +67,7 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getAdverts }
+  { getAdverts, addAdvert }
 )(Adverts);
 /*
 - PROMESSE JAVASCRIPT

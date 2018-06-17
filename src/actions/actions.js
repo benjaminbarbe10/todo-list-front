@@ -13,7 +13,7 @@ export const GET_ADVERT = "GET_ADVERT";
 
 export function addAdvert(data) {
   return dispatch => {
-    return fetch("adverts", {
+    fetch("adverts", {
       method: "post",
       body: JSON.stringify(data),
       headers: {
